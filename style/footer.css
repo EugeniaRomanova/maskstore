@@ -1,0 +1,104 @@
+.footer {
+  padding: 3% 7% 0 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  height: 15vw;
+  margin-top: 3%;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 45%;
+}
+
+.footer__nav-link {
+  font-family: Caslon Antique, Arial, serif;
+  font-size: 1vw;
+  color: rgba(98, 98, 98, 1);
+}
+
+.footer__media-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 2.5%;
+  height: 55%;
+}
+
+.media-list__link {
+  position: relative;
+  color: transparent;
+  width: 100%;
+  font-size: 2vw;
+}
+
+.media-list__link-vk::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/icons/vk.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.media-list__link-inst::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-image: url("../img/icons/inst.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.media-list__link-tg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-image: url("../img/icons/tg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 30%;
+  height: 50%;
+  background-image: url("../img/MAL CORPSE.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.footer__logo-description {
+  font-family: 'DK Face Your Fears', 'Roboto', sans-serif;
+  color: #ffffff;
+  font-weight: 100;
+  display: block;
+  font-size: 1vw;
+}
+
+.footer__logo-heart {
+  margin-left: 0.5vw;
+  font-family: 'I Heart Covid19', 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 1vw;
+}

@@ -1,0 +1,596 @@
+@import url("global.css");
+@import url("header.css");
+@import url("footer.css");
+@import url("update-card.css");
+@import url("forms.css");
+@import url("registration.css");
+
+/*Крошки*/
+
+.navigation__breadcrumps {
+  font-size: 1vw;
+  height: 1.2vw;
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+  letter-spacing: 0.07em;
+}
+
+.breadcrumps--item-arrow {
+  width: 2vw;
+  height: 65%;
+  background-image: url("../img/Arrow.png");
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.main__navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Поиск*/
+
+.navigation__search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 20vw;
+  margin-top: 3%;
+}
+
+.navigation__search--field {
+  font-family: "Caslon Antique", "Arial", serif;
+  font-size: 1vw;
+  padding: 0;
+  padding-left: 2%;
+  color: #A6A6A6;
+  width: 70%;
+  background-color: black;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #C3C3C3;
+  letter-spacing: 0.07em;
+}
+
+.navigation__search--button {
+  font-family: "Caslon Antique", "Arial", serif;
+  font-size: 1vw;
+  width: 25%;
+  height: 1.7vw;
+  border: 1px solid rgba(102, 102, 102, 1);
+  background-color: transparent;
+  border-radius: 2%;
+  color: rgba(219, 219, 219, 1);
+  font-weight: 50;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.navigation__search--button:hover {
+  background-color: rgba(112, 255, 0, 0.15);
+}
+
+/*Форма добавления карточки*/
+
+.add_form__header {
+  margin-top: 5%;
+  font-family: "Caslon Antique", "Arial", serif;
+  font-size: 1.5vw;
+  font-weight: 50;
+  color: rgba(219, 219, 219, 1);
+  letter-spacing: 0.05em;
+}
+
+.add_form {
+  width: 20vw;
+}
+
+.add_form__photo {
+  margin-top: 10%;
+}
+
+
+/*Мэйн*/
+
+.catalog__card-list {
+  display: flex;
+  position: relative;
+  padding: 0 1% 11%;
+  flex-wrap: wrap;
+  margin-top: 2.7%;
+  background: linear-gradient(to right, rgba(23, 23, 23, 0.72), rgba(57, 57, 57, 0.72) 50%, rgba(23, 23, 23, 0.72)),
+  /*repeating-linear-gradient(26deg, transparent 0, transparent 18%, rgba(102, 102, 102, 1) 18%, rgba(102, 102, 102, 1) 18.05%, transparent 18.05%, transparent 23%, rgba(102, 102, 102, 1) 23%, rgba(102, 102, 102, 1) 23.05%),
+  repeating-linear-gradient(-26deg, transparent 0, transparent 18%, rgba(102, 102, 102, 1) 18%, rgba(102, 102, 102, 1) 18.05%, transparent 18.05%, transparent 23%, rgba(102, 102, 102, 1) 23%, rgba(102, 102, 102, 1) 23.05%)*/
+  repeating-linear-gradient(26deg, rgba(102, 102, 102, 1) 29.5vw, rgba(102, 102, 102, 1) 29.6vw, transparent 29.6vw, transparent 38.5vw, rgba(102, 102, 102, 1) 38.5vw, rgba(102, 102, 102, 1) 38.6vw, transparent 38.6vw, transparent 68vw),
+  repeating-linear-gradient(-26deg, rgba(102, 102, 102, 1) 29.5vw, rgba(102, 102, 102, 1) 29.6vw, transparent 29.6vw, transparent 38.5vw, rgba(102, 102, 102, 1) 38.5vw, rgba(102, 102, 102, 1) 38.6vw, transparent 38.6vw, transparent 68vw);
+  background-size: 100%, 50%, 50%;
+  background-repeat: repeat, repeat-y, repeat-y;
+  background-position: top center, left -2vw, right -2vw;
+  overflow: hidden;
+}
+
+/*Айтем*/
+
+.card-list__item:nth-child(n+3) {
+  margin-top: 4%;
+}
+
+.card-list__item {
+  position: relative;
+  width: 50%;
+  z-index: 1;
+}
+
+.catalog__card--item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 13%;
+}
+
+/*Картинка*/
+
+.card--item__pic-link {
+  order: -1;
+  width: 70%;
+  height: 23.1vw;
+}
+
+.card--item__photo {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  box-shadow: 0 0 30px 5px #000000;
+}
+
+.card--item__pic {
+  width: 57%;
+  margin: auto;
+  filter: drop-shadow(0 9px 15px rgba(0, 0, 0, 1)) drop-shadow(0 0 60px rgba(133, 133, 133, 0.9));
+}
+
+@keyframes bigger {
+  80% {
+    width: 13vw;
+    height: auto;
+    filter: drop-shadow(0 0 100px rgba(112, 255, 0, 1));
+  }
+}
+
+.card--item__photo:hover .card--item__pic {
+  animation-name: bigger;
+  animation-duration: 0.7s;
+}
+
+.card--item__pic:hover {
+  animation-name: bigger;
+  animation-duration: 0.7s;
+}
+
+/*Череп с радугами*/
+
+@keyframes bigger-2 {
+  80% {
+    width: 15vw;
+    height: auto;
+    filter: drop-shadow(0 0 100px rgba(112, 255, 0, 1));
+  }
+}
+
+@keyframes bigger-3 {
+  80% {
+    width: 17vw;
+    height: auto;
+    filter: drop-shadow(0 0 100px rgba(112, 255, 0, 1));
+  }
+}
+
+@keyframes bigger-plague {
+  80% {
+    width: 11vw;
+    height: auto;
+    filter: drop-shadow(0 0 100px rgba(112, 255, 0, 1));
+  }
+}
+
+@keyframes bigger-metal {
+  80% {
+    filter: drop-shadow(0 0 100px rgba(112, 255, 0, 1));
+  }
+}
+
+.card--item__pic-rainbow {
+  width: 64.5%;
+}
+
+.card--item__photo-rainbow:hover .card--item__pic-rainbow {
+  animation-name: bigger-2;
+  animation-duration: 0.7s;
+}
+
+.card--item__pic-rainbow:hover {
+  animation-name: bigger-2;
+  animation-duration: 0.7s;
+}
+
+.card--item__pic-catusyap {
+  width: 64%;
+}
+
+.card--item__photo-catusyap:hover .card--item__pic-catusyap {
+  animation-name: bigger-2;
+  animation-duration: 0.7s;
+}
+
+.card--item__pic-catusyap:hover {
+  animation-name: bigger-2;
+  animation-duration: 0.7s;
+}
+
+.card--item__pic-hyena {
+  width: 73%;
+}
+
+.card--item__photo-hyena:hover .card--item__pic-hyena {
+  animation-name: bigger-3;
+  animation-duration: 0.7s;
+}
+
+.card--item__pic-hyena:hover {
+  animation-name: bigger-3;
+  animation-duration: 0.7s;
+}
+
+.card--item__pic-plague {
+  width: 48%;
+}
+
+.card--item__photo-plague:hover .card--item__pic-plague {
+  animation-name: bigger-plague;
+  animation-duration: 0.7s;
+}
+
+/*Ссылка на страницу редактирования*/
+.card--item__update-link {
+  display: block;
+  position: absolute;
+  top: 3%;
+  left: 72%;
+  z-index: 3;
+  width: 8.5%;
+  height: 6.8%;
+  border: 1px solid rgba(102, 102, 102, 1);
+  background-color: transparent;
+  border-radius: 2%;
+  background-image: url("../img/catalog-img/pencil.png");
+  background-repeat: no-repeat;
+  background-size: 60% 60%;
+  background-position: center center;
+  cursor: pointer;
+}
+
+/*Ссылка удаления*/
+.card--item__delete-link {
+  display: block;
+  position: absolute;
+  top: 11%;
+  left: 72%;
+  z-index: 3;
+  width: 8.5%;
+  height: 6.8%;
+  border: 1px solid rgba(102, 102, 102, 1);
+  background-color: transparent;
+  border-radius: 2%;
+  background-image: url("../img/catalog-img/delete.png");
+  background-repeat: no-repeat;
+  background-size: 60% 60%;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.card--item__update-link:hover, .card--item__delete-link:hover {
+  background-color: rgba(112, 255, 0, 0.15);
+}
+
+
+/*Заголовок и цена*/
+
+.card--item__header, .card--item__price {
+  font-family: "Caslon Antique", "Arial", serif;
+  font-weight: 50;
+  color: rgba(219, 219, 219, 1);
+  letter-spacing: 0.05em;
+}
+
+.card--item__link {
+  display: block;
+  font-size: 2.01vw;
+  margin-top: 9.5%;
+}
+
+.card--item__price {
+  margin-top: 2%;
+  font-size: 2.5vw;
+}
+
+/*Кнопки*/
+
+.card--item__buttons {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 38.5%;
+  height: 2.9vw;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card--item__cart-button {
+  width: 66%;
+  border: 1px solid rgba(102, 102, 102, 1);
+  font-family: Caslon Antique, Arial, serif;
+  background-color: transparent;
+  border-radius: 2%;
+  color: rgba(219, 219, 219, 1);
+  font-size: 1.25vw;
+  font-weight: 50;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.card--item__heart-button {
+  width: 26%;
+  border: 1px solid rgba(102, 102, 102, 1);
+  background-color: transparent;
+  border-radius: 2%;
+  background-image: url("../img/catalog-img/heart.png");
+  background-repeat: no-repeat;
+  background-size: 60% 60%;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.card--item__cart-button:hover, .card--item__heart-button:hover {
+  background-color: rgba(112, 255, 0, 0.05);
+}
+
+.card--item__cart-button:active {
+  background-color: rgba(112, 255, 0, 0.12);
+}
+
+/*Страницы*/
+
+.catalog__pages-list {
+  display: flex;
+  width: 10%;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  font-size: 1.5vw;
+  color: rgba(102, 102, 102, 1);
+  font-family: Caslon Antique, Arial, serif;
+}
+
+.pages-list__link-current {
+  color: #ffffff;
+}
+
+/*Подвал*/
+
+.footer {
+  padding: 3% 7% 0 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  height: 15vw;
+  margin-top: 3%;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 45%;
+}
+
+.footer__nav-link {
+  font-family: Caslon Antique, Arial, serif;
+  font-size: 1vw;
+  color: rgba(98, 98, 98, 1);
+}
+
+/*Иконки*/
+
+.footer__media-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 2.5%;
+  height: 55%;
+}
+
+.media-list__link {
+  position: relative;
+  color: transparent;
+  width: 100%;
+  font-size: 2vw;
+}
+
+.media-list__link-vk::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/icons/vk.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.media-list__link-inst::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-image: url("../img/icons/inst.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.media-list__link-tg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-image: url("../img/icons/tg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+/*Лого*/
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 30%;
+  height: 50%;
+  background-image: url("../img/MAL CORPSE.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.footer__logo-description {
+  font-family: 'DK Face Your Fears', 'Roboto', sans-serif;
+  color: #ffffff;
+  font-weight: 100;
+  display: block;
+  font-size: 1vw;
+}
+
+.footer__logo-heart {
+  margin-left: 0.5vw;
+  font-family: 'I Heart Covid19', 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 1vw;
+}
+
+/*Псевдоэлементы*/
+
+.card-list__item::before { /*Верхняя большая полоса*/
+  content: '';
+  position: absolute;
+  top: 29vw;
+  left: -2%;
+  width: 105%;
+  height: 1px;
+  background-color: rgba(102, 102, 102, 1);
+}
+
+.card-list__item::after { /*Верхняя маленькая полоса*/
+  content: '';
+  position: absolute;
+  top: 29vw;
+  left: 28%;
+  width: 44%;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.catalog__card--item::before { /*Левый нижний угол*/
+  content: '';
+  position: absolute;
+  top: 21vw;
+  left: 8.5%;
+  background-image: url("../img/catalog-img/corner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(45deg);
+
+  width: 15%;
+  height: 10%;
+  z-index: 2;
+}
+
+.catalog__card--item::after { /*Правый нижний угол*/
+  content: '';
+  position: absolute;
+  top: 21vw;
+  left: 76.5%;
+  background-image: url("../img/catalog-img/corner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-45deg);
+
+  width: 15%;
+  height: 10%;
+  z-index: 2;
+}
+
+.card--item__photo::before { /*Левый верхний угол*/
+  content: '';
+  position: absolute;
+  top: -6.3%;
+  left: -9.3%;
+  background-image: url("../img/catalog-img/corner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(135deg);
+
+  width: 21.2%;
+  height: 15%;
+}
+
+.card--item__photo::after { /*Правый верхний угол*/
+  content: '';
+  position: absolute;
+  top: -6.3%;
+  left: 88%;
+  background-image: url("../img/catalog-img/corner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-135deg);
+
+  width: 21.2%;
+  height: 15%;
+}
+
+.card--item__buttons::before { /*Нижняя маленькая полоса*/
+  content: '';
+  position: absolute;
+  top: 4.4vw;
+  left: -0.7vw;
+  width: 13vw;
+  height: 1px;
+  background-color: white;
+  z-index: 1;
+}
+
+.card--item__buttons::after { /*Нижняя большая полоса*/
+  content: '';
+  position: absolute;
+  top: 4.4vw;
+  left: -100%;
+  width: 33.7vw;
+  height: 1px;
+  background-color: rgba(102, 102, 102, 1);
+}
