@@ -7,20 +7,12 @@ require_once('../vendor/helpers.php');
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../style/catalog.css">
-    <title>Mal Corpse -- Каталог</title>
+    <title>Mal Corpse -- Регистрация</title>
   </head>
   <body class="catalog__body">
     <div class="container catalog__container">
       <div class="catalog">
-        <header class="header catalog__header">
-          <a href="../index.php" class="header__logo-address"><img class="header__logo" src="../img/MAL CORPSE.png" alt="Логотип Mal Corpse"></a>
-          <ul class="header__menu">
-            <li class="header__menu-item menu-item-checked"><a href="../catalog/catalog1.php">Каталог</a></li>
-            <li class="header__menu-item"><a href="#">Блог</a></li>
-            <li class="header__menu-item"><a href="#">Обо мне</a></li>
-            <li class="header__menu-item"><a href="#">Вход</a></li>
-          </ul>
-        </header>
+        <?php include("../app/header.php"); ?>
         <main class="catalog__main">
           <div class="main__navigation">
             <ul class="navigation__breadcrumps">
@@ -51,27 +43,7 @@ require_once('../vendor/helpers.php');
             <small class="registration__to-login">У меня уже есть <a href="login.php">аккаунт</a></small>
           </form>
         </main>
-        <footer class="catalog__footer footer">
-          <ul class="footer__nav">
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Каталог</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Блог</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Обо мне</a></li>
-          </ul>
-          <div class="footer__logo">
-            <span class="footer__logo-description">Маски от Мэла Корпс<span class="footer__logo-heart">()</span></span>
-          </div>
-          <ul class="footer__media-list">
-            <li class="media-list__item media-list__item-vk">
-              <a href="https://vk.com/halloweenfaces" class="media-list__link media-list__link-vk">В</a>
-            </li>
-            <li class="media-list__item media-list__item-inst">
-              <a href="https://www.instagram.com/corpse_mal_masks/" class="media-list__link media-list__link-inst">И</a>
-            </li>
-            <li class="media-list__item media-list__item-tg">
-              <a href="#" class="media-list__link media-list__link-tg">Т</a>
-            </li>
-          </ul>
-        </footer>
+        <?php include("../app/footer.php"); ?>
       </div>
     </div>
   </body>
