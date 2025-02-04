@@ -35,12 +35,39 @@
           </div>
           <ul class="catalog__card-list">
             <?php
-              $cards = mysqli_query($connect, "SELECT mask_card.id, preview_photos.path, mask_titles.title, mask_prices.price 
+            function tt($value) {
+              echo '<pre>';
+              print_r($value);
+              echo '</pre>';
+            }
+            
+            //Проверка выполнения запроса к БД
+            function dbCheckError($query){
+              $errInfo = $query->errorInfo();
+              if($errInfo[0] !== PDO::ERR_NONE) {
+                echo $errInfo[2];
+                exit();
+              }
+              return true;
+            }
+            
+            $sql = "SELECT mask_card.id, preview_photos.path, mask_titles.title, mask_prices.price 
+              FROM mask_card
+              LEFT JOIN preview_photos ON mask_card.photo = preview_photos.id
+              LEFT JOIN mask_titles ON mask_card.title_number = mask_titles.id
+              LEFT JOIN mask_prices ON mask_card.price_number = mask_prices.id";
+            $query = $pdo->prepare($sql);
+            $query->execute();
+            dbCheckError($query);
+            
+            $cards = $query->fetchAll();
+            //tt($cards);
+              /*$cards = mysqli_query($connect, "SELECT mask_card.id, preview_photos.path, mask_titles.title, mask_prices.price 
                 FROM mask_card
                 LEFT JOIN preview_photos ON mask_card.photo = preview_photos.id
                 LEFT JOIN mask_titles ON mask_card.title_number = mask_titles.id
                 LEFT JOIN mask_prices ON mask_card.price_number = mask_prices.id");
-              $cards = mysqli_fetch_all($cards);
+              $cards = mysqli_fetch_all($cards);*/
               
               foreach ($cards as $card) {
                 ?>
