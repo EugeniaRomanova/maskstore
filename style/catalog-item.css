@@ -4,6 +4,10 @@
 
 /*Фото*/
 
+.catalog-item__main {
+  background-color: #202020;
+}
+
 .catalog-item__section {
   display: flex;
   flex-direction: row;

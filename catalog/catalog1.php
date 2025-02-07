@@ -24,7 +24,7 @@
               <button type="submit" class="navigation__search--button" name="search_button">Искать</button>
             </form>
           </div>
-          <div class="catalog__add_form">
+          <!--<div class="catalog__add_form">
           <h2 class="add_form__header">Добавить карточку товара</h2>
           <form class="add_form" action="../vendor/create.php" method="post" enctype="multipart/form-data">
             <input class="add_form__photo form-field" type="file" name="mask-image" value="">
@@ -32,7 +32,7 @@
             <input class="add_form__price form-field" type="text" name="mask-price" placeholder="Цена товара">
             <button class="add_form__button submit-button" type="submit">Добавить</button>
           </form>
-          </div>
+        </div> -->
           <ul class="catalog__card-list">
             <?php
             function tt($value) {
@@ -79,8 +79,8 @@
                         <img class="card--item__pic" src="../img/catalog-img/<?=$card[1]?>" alt="<?=$card[2]?>">
                       </div>
                     </a>
-                    <a href="../update-card.php?id=<?=$card[0]?>" class="card--item__update-link"></a>
-                    <a href="../vendor/delete.php?id=<?=$card[0]?>" class="card--item__delete-link"></a>
+                    <!-- <a href="../update-card.php?id=<?=$card[0]?>" class="card--item__update-link"></a>
+                    <a href="../vendor/delete.php?id=<?=$card[0]?>" class="card--item__delete-link"></a> -->
                     <div class="card--item__price">
                       <?=$card[3]?> р
                     </div>
