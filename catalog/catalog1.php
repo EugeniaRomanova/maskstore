@@ -15,7 +15,7 @@
         <main class="catalog__main">
           <div class="main__navigation">
             <ul class="navigation__breadcrumps">
-              <li class="navigation__breadcrumps--item"><a class="navigation__breadcrumps--link" href="../index.html">Главная</a></li>
+              <li class="navigation__breadcrumps--item"><a class="navigation__breadcrumps--link" href="../index.php">Главная</a></li>
               <li class="navigation__breadcrumps--item"><a class="navigation__breadcrumps--link" href="#">Каталог</a></li>
             </ul>
             <form class="navigation__search" action="search.php" method="post">
