@@ -2,6 +2,8 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="yandex" content="noindex, nofollow" />
     <link rel="stylesheet" href="../style/catalog-item.css">
     <title>Mal Corpse -- Каталог</title>
   </head>
