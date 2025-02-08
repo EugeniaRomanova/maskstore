@@ -47,14 +47,14 @@
                 ?>
                 <li class="card-list__item">
                   <article class="catalog__card--item">
-                    <a href="../catalog-items/<?=$card[1]?>.html" class="card--item__link"><h2 class="card--item__header"><?=$card[2]?></h2></a>
-                    <a href="../catalog-items/<?=$card[1]?>.html" class="card--item__pic-link">
+                    <a href="../catalog-items/item.php?id=<?=$card[0]?>.php" class="card--item__link"><h2 class="card--item__header"><?=$card[2]?></h2></a>
+                    <a href="../catalog-items/item.php?id=<?=$card[0]?>.php" class="card--item__pic-link">
                       <div class="card--item__photo">
-                        <img class="card--item__pic" src="../img/catalog-img/<?=$card[1]?>.png" alt="<?=$card[2]?>">
+                        <img class="card--item__pic" src="../img/catalog-img/<?=$card[1]?>" alt="<?=$card[2]?>">
                       </div>
                     </a>
-                    <a href="../update-card.php?id=<?=$card[0]?>" class="card--item__update-link"></a>
-                    <a href="../vendor/delete.php?id=<?=$card[0]?>" class="card--item__delete-link"></a>
+                    <!--<a href="../update-card.php?id=<?=$card[0]?>" class="card--item__update-link"></a>
+                    <a href="../vendor/delete.php?id=<?=$card[0]?>" class="card--item__delete-link"></a>-->
                     <div class="card--item__price">
                       <?=$card[3]?> р
                     </div>
