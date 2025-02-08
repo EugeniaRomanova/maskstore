@@ -109,7 +109,7 @@
         </div>
         <img class="main__catalog" src="img/main/catalog.png" alt="Каталог">
         <section class="catalog-item__more">
-          <a href="catalog/catalog1.html" class="catalog-item__more-link">
+          <a href="catalog/catalog1.php" class="catalog-item__more-link">
             <span class="more-link__first">Смотреть все работы</span><span class="more-link__second">&gt</span>
           </a>
           <div class="catalog-item__more-container">
